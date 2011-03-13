@@ -267,9 +267,9 @@
     .propel-14 { left: 840px; }
     .propel-15 { left: 900px; }
 
-	/**
-	 * Column - Prepend (In Flow) 
-	 */
+    /**
+     * Column - Prepend (In Flow) 
+     */
 
     .prepend-1 { padding-left: 60px; }
     .prepend-2 { padding-left: 120px; }
@@ -287,9 +287,9 @@
     .prepend-14 { padding-left: 840px; }
     .prepend-15 { padding-left: 900px; }
 
-	/**
-	 * Column - Append (In Flow) 
-	 */
+    /**
+     * Column - Append (In Flow) 
+     */
 
     .append-1 { padding-right: 60px; }
     .append-2 { padding-right: 120px; }
@@ -306,10 +306,10 @@
     .append-13 { padding-right: 780px; }
     .append-14 { padding-right: 840px; }
     .append-15 { padding-right: 900px; }
-	
-	/** 
-	 * Column - Push - Pushing a Sibling (In Flow) 
-	 */
+    
+    /** 
+     * Column - Push - Pushing a Sibling (In Flow) 
+     */
 
     .push-1 { margin-right: 90px; }
     .push-2 { margin-right: 170px; }
@@ -321,10 +321,10 @@
     .push-8 { margin-right: 650px; }
     .push-9 { margin-right: 730px; }
     .push-10 { margin-right: 810px; }
-	
-	/**
-	 * Column - Pull - Pulling a Sibling (In Flow) 
-	 */
+    
+    /**
+     * Column - Pull - Pulling a Sibling (In Flow) 
+     */
 
     .pull-1 { margin-right: -90px; }
     .pull-2 { margin-right: -170px; }

@@ -416,13 +416,13 @@
     textarea.style-1 { 
         padding: 5px 5px; 
         border: 1px solid               #ccc; }
-	
-	
+    
+    
     input { }
-	input.text { }
-	input.checkbox { }
-	input.radio { }
-	input.file { }
+    input.text { }
+    input.checkbox { }
+    input.radio { }
+    input.file { }
     input.password { }
     input.button { }
     input.submit { }
@@ -430,17 +430,17 @@
     input.reset { }
     
     select { }
-	select.single { }
-	select.multiple { }
-	
-	textarea { }
-	textarea.text { }
-	
-	fieldset { }
-	legend { 
-	   margin: 0 0 1em; 
-	   border-bottom: 3px solid            #FFBB51; }
-	label { }
+    select.single { }
+    select.multiple { }
+    
+    textarea { }
+    textarea.text { }
+    
+    fieldset { }
+    legend { 
+       margin: 0 0 1em; 
+       border-bottom: 3px solid            #FFBB51; }
+    label { }
 
 
 /**
