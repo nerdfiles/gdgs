@@ -41,3 +41,5 @@ Thumbs.d
 #########
 _docs/
 _docs/*
+
+!.gitignore
