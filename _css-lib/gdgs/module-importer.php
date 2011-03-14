@@ -46,13 +46,20 @@ function css_loader() {
     $modulePath = CSSPATH . "_modules/";
 
     foreach( $modulesArray as $key => $module ) {
+    
         $module_stylesheet = $modulePath . $module;
-        if (file_exists($module_stylesheet)) {
+        
+        if ( file_exists( $module_stylesheet ) ) {
+        
+            // File system open and close
             $newfile = fopen( $module_stylesheet, "r" );
             $file_content = fread( $newfile, filesize( $module_stylesheet ) );
             fclose( $newfile );
+            
             array_push( $cssoutput, $file_content );
+            
         }
+        
     }
     
     /**
