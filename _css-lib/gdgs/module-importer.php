@@ -20,6 +20,8 @@ define( "CSSPATH", ROOT . "/gdgs/_css-lib/gdgs/");
  *
  * USAGE: <link rel="stylesheet" href="http://nerdfiles.net/gdgs/_css-lib/gdgs/module-importer.php?_modules=reset.css,font.css,typesetting.css,system.css,form.css,tools.css,table.css,bounds.css,standardize.css,engine-importer.css,browser-importer.css,device-importer.css,page.css,print.css&_compress=true" />
  *        <link rel="stylesheet" href="http://nerdfiles.net/gdgs/_css-lib/gdgs/module-importer.php?_modules=reset.css,font.css,typesetting.css,system.css,form.css,tools.css,table.css,bounds.css,standardize.css" />
+ *
+ * @todo            Consider replacing standardize with "style.css", to allow a hook into all this madness. 
  */
     
 function css_loader() {
