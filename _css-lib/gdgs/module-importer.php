@@ -11,213 +11,80 @@ header("Expires: ".gmdate("D, d M Y H:i:s", (time()+900)) . " GMT");
  */
  
 define( "ROOT", $_SERVER['DOCUMENT_ROOT'] );
-define( "CSSPATH", ROOT . "/gdgs/_css-lib/gdgs/_modules/");
+define( "CSSPATH", ROOT . "/gdgs/_css-lib/gdgs/");
 
-/* For development */
-$pageName = $_SERVER['PHP_SELF']; // for if (preg_match('/pageName/',$self))
-
-/* For loading */
+/**
+ * css_loader
+ * 
+ * Order counts!
+ *
+ * USAGE: <link rel="stylesheet" href="http://nerdfiles.net/gdgs/_css-lib/gdgs/module-importer.php?_modules=reset.css,font.css,typesetting.css,system.css,form.css,tools.css,table.css,bounds.css,standardize.css,engine-importer.css,browser-importer.css,device-importer.css,page.css,print.css&_compress=true" />
+ *        <link rel="stylesheet" href="http://nerdfiles.net/gdgs/_css-lib/gdgs/module-importer.php?_modules=reset.css,font.css,typesetting.css,system.css,form.css,tools.css,table.css,bounds.css,standardize.css" />
+ */
     
-function load_css_module( $filename = '' ) {
+function css_loader() {
 
-    $get = $_GET['_modules'];
-    $modules = explode( ",", $get );
-
-    if ( $filename != '' && in_array( $filename, $modules ) ) {
-        $stylesheet = CSSPATH . $filename;
+    // Check if param _compress is set and true, all else, including false,
+    // will fail to trigger regex compression.
     
-        if (file_exists($stylesheet)) {
-            return true;
-        } else {
-            return false;
+    $compress = ( isset($_GET['_compress']) && $_GET['_compress'] == 'true' ) 
+                ? $_GET['_compress'] 
+                : false;
+    
+    // Create CSS output array.
+    
+    $cssoutput = array();
+    
+    /**
+     * Modules
+     */
+
+    $modules = $_GET['_modules'];
+    $modulesArray = explode( ",", $modules );    
+    $modulePath = CSSPATH . "_modules/";
+
+    foreach( $modulesArray as $key => $module ) {
+        $module_stylesheet = $modulePath . $module;
+        if (file_exists($module_stylesheet)) {
+            $newfile = fopen( $module_stylesheet, "r" );
+            $file_content = fread( $newfile, filesize( $module_stylesheet ) );
+            fclose( $newfile );
+            array_push( $cssoutput, $file_content );
         }
-    
     }
     
+    /**
+     * Pages
+     *
+     * Develop paging schema that depends on URL only. If one can stipulate the URL schema,
+     * then this can work.
+     */
+    
+    $pageName = $_SERVER['PHP_SELF']; // for if (preg_match('/pageName/',$self))
+    
+    // Combine CSS modules.
+
+    $css = join("", $cssoutput);
+    
+    /**
+     * Apply compression.
+     */
+    
+    if ( $compress ) {
+    
+        // strips but leaves spaces
+        // preg_replace( '/(\/\*[\s\S]*?\*\/¦[\r]¦[\n]¦[\r\n])/', '', $css );
+        
+        // strips whitespace, tabs, and comments
+        $css = preg_replace( '!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css );
+        $css = str_replace( array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $css );
+    }
+
+    // Print CSS.
+    
+    echo $css;
+
 }
+
+css_loader();
 ?>
-@charset "utf-8";
-
-/**
- * GDGS Module Importer (Main)
- * 
- * This is the main GDGS Module Importer. It doubles as GDGS's "initializer."
- * Comment out what you don't want or need.
- * 
- * Quick spec: Hit, e.g., module-importer.css?_modules=reset,font,system
- *             But the order must be preserved.
- *
- * @cssdoc          version 1.0-pre
- * 
- * @site            Getting Dress'd Grid System
- * @link            http://nerdfiles.net/gdgs/
- * @author          nerdfiles
- * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
- * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
- *
- * @project         gdgs
- * @version         0.0.1
- * @package         gdgs-core
- * @subpackage      gdgs-importer
- * @since           0.0.1
- * @date            2011-03-09 03:06
- * @lastmodified    2011-03-09 03:06
- *
- * @todo            Complete cssdoc implementation.
-                    @package =def core means required for gdgs to function assuming all
- *                  features are assumed.
-                    Unit test all modules.
- *
- * @css-for         all
- * @media           all
- * @affected        all
- * @bugfix
- * @workaround
- * @tested          all
- * @valid           true
- */
-
-
-<?php if ( load_css_module('reset.css') ) : ?>
-/**
- * Reset
- * 
- * @section:        import
- * @subsection      utility
- */
- 
-    @import url('_modules/reset.css');
-<?php endif; ?>
-
-
-/**
- * Font
- * 
- * @section:        import
- * @subsection      utility
- */
- 
-    @import url('_modules/font.css');
-
-
-/**
- * Typesetting
- * 
- * @section:        import
- * @subsection      utility
- */
- 
-    @import url('_modules/typesetting.css');
-
-
-/**
- * System
- * 
- * @section:        import
- * @subsection      core
- */
-
-    @import url('_modules/system.css');
-    
-
-/**
- * Form
- * 
- * @section:        import
- * @subsection      extension
- */
-
-    @import url('_modules/form.css');
-
-
-/**
- * Tools
- *
- * @section:        import
- * @subsection      utility
- */
-
-    @import url('_modules/tools.css');
-    
-
-/**
- * Table
- * 
- * @section:        import
- * @subsection      extension
- */
- 
-    @import url('_modules/table.css');
-    
-
-/**
- * Bounds
- *
- * @section:        import
- * @subsection      utility
- */
-
-    @import url('_modules/bounds.css');
-
-
-/**
- * Standardize
- *
- * @section:        import
- * @subsection      utility
- */
-
-    @import url('_modules/standardize.css');
-
-
-/**
- * Engine Importer
- *
- * @section         import
- * @subsection      importer
- */
-
-    @import url('_importers/engine-importer.css');
-
-
-/**
- * Browser Importer
- *
- * @section:        import
- * @subsection      importer
- */
-
-    @import url('_importers/browser-importer.css');
-    
-
-/**
- * Device Importer
- *
- * @section:        import
- * @subsection      importer
- */
-
-    @import url('_importers/device-importer.css');
-
-
-/**
- * Page
- *
- * @section:        import
- * @subsection      media
- */
-
-    @import url('_modules/page.css');
-
-
-/**
- * Print
- *
- * @section:        import
- * @subsection      media
- */
-
-    @import url('_modules/print.css');
-
-
-/* End of module-importer.css */
