@@ -1,10 +1,11 @@
 Welcome to GDGS!
----
+***
 
 @todo 
-    1. Cross-browser testing: 
+    1. Cross-browser module unit testing: 
         *. Trident engines
         a. IE6 [ ]
+            
         b. IE7 [ ]
         c. IE8 [ ]
         *. Gecko engines [ ]
@@ -21,3 +22,4 @@ Welcome to GDGS!
         l. Safari 3.x
         m. Safari 4.x
         n. Safari 5.x
+    2. 
