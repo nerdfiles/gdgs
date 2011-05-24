@@ -45,7 +45,7 @@ header("Expires: ".gmdate("D, d M Y H:i:s", (time()+900)) . " GMT");
  */
  
 define( "ROOT", $_SERVER['DOCUMENT_ROOT'] );
-define( "CSSPATH", ROOT . "/gdgs/_css-lib/gdgs/");
+define( "CSSPATH", "" );
 
 /**
  * css_loader
