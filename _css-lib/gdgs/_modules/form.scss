@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+/**
+ * GDGS Form
+ * 
+ * Form, like Table, should be optional and an extension.
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-optional
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            None.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+
+/**
+ * Bulwarking Forms 
+ *
+ * e.g., .bulwark-1, .bulwark-2, and so on...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+
+.column-layout {
+  .bulwark-1 input {
+    &.bulwark-1-columns-1 {
+      width: 35px; }
+    &.bulwark-1-columns-2 {
+      width: 95px; }
+    &.bulwark-1-columns-3 {
+      width: 155px; }
+    &.bulwark-1-columns-4 {
+      width: 215px; }
+    &.bulwark-1-columns-5 {
+      width: 275px; }
+    &.bulwark-1-columns-6 {
+      width: 335px; }
+    &.bulwark-1-columns-7 {
+      width: 395px; }
+    &.bulwark-1-columns-8 {
+      width: 455px; }
+    &.bulwark-1-columns-9 {
+      width: 515px; }
+    &.bulwark-1-columns-10 {
+      width: 575px; }
+    &.bulwark-1-columns-11 {
+      width: 635px; }
+    &.bulwark-1-columns-12 {
+      width: 695px; }
+    &.bulwark-1-columns-13 {
+      width: 755px; }
+    &.bulwark-1-columns-14 {
+      width: 815px; }
+    &.bulwark-1-columns-15 {
+      width: 875px; }
+    &.bulwark-1-columns-16 {
+      width: 935px; }
+    &.bulwark-1-columns-1-style-1 {
+      width: 23px; }
+    &.bulwark-1-columns-2-style-1 {
+      width: 83px; }
+    &.bulwark-1-columns-3-style-1 {
+      width: 143px; }
+    &.bulwark-1-columns-4-style-1 {
+      width: 203px; }
+    &.bulwark-1-columns-5-style-1 {
+      width: 263px; }
+    &.bulwark-1-columns-6-style-1 {
+      width: 323px; }
+    &.bulwark-1-columns-7-style-1 {
+      width: 383px; }
+    &.bulwark-1-columns-8-style-1 {
+      width: 443px; }
+    &.bulwark-1-columns-9-style-1 {
+      width: 503px; }
+    &.bulwark-1-columns-10-style-1 {
+      width: 563px; }
+    &.bulwark-1-columns-11-style-1 {
+      width: 623px; }
+    &.bulwark-1-columns-12-style-1 {
+      width: 683px; }
+    &.bulwark-1-columns-13-style-1 {
+      width: 743px; }
+    &.bulwark-1-columns-14-style-1 {
+      width: 803px; }
+    &.bulwark-1-columns-15-style-1 {
+      width: 863px; }
+    &.bulwark-1-columns-16-style-1 {
+      width: 923px; } }
+  input {
+    &.columns-1-style-1 {
+      width: 28px; }
+    &.columns-2-style-1 {
+      width: 88px; }
+    &.columns-3-style-1 {
+      width: 148px; }
+    &.columns-4-style-1 {
+      width: 208px; }
+    &.columns-5-style-1 {
+      width: 268px; }
+    &.columns-6-style-1 {
+      width: 328px; }
+    &.columns-7-style-1 {
+      width: 388px; }
+    &.columns-8-style-1 {
+      width: 448px; }
+    &.columns-9-style-1 {
+      width: 508px; }
+    &.columns-10-style-1 {
+      width: 568px; }
+    &.columns-11-style-1 {
+      width: 628px; }
+    &.columns-12-style-1 {
+      width: 688px; }
+    &.columns-13-style-1 {
+      width: 748px; }
+    &.columns-14-style-1 {
+      width: 808px; }
+    &.columns-15-style-1 {
+      width: 868px; }
+    &.columns-16-style-1 {
+      width: 928px; } }
+  label {
+    &.columns-1, &.columns-2, &.columns-3, &.columns-4, &.columns-5, &.columns-6, &.columns-7, &.columns-8, &.columns-9, &.columns-10, &.columns-11, &.columns-12, &.columns-13, &.columns-14, &.columns-15, &.columns-16 {
+      position: relative;
+      top: -4px; } }
+  dt label {
+    &.columns-1, &.columns-2, &.columns-3, &.columns-4, &.columns-5, &.columns-6, &.columns-7, &.columns-8, &.columns-9, &.columns-10, &.columns-11, &.columns-12, &.columns-13, &.columns-14, &.columns-15, &.columns-16 {
+      position: relative;
+      top: 4px; } } }
+
+/**
+ * Form Field Widths
+ *
+ * e.g., input.columns-1-style-1, input.columns-1-style-2, and so on...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+
+/**
+ * Form Field Vertical Position
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+
+/* End of _modules/form.css */

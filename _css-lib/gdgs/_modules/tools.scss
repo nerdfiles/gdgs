@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /**
  * GDGS Tools
  * 
@@ -29,6 +31,7 @@
  * @tested          all
  * @valid           true
  */
+
 /**
  * IE: hasLaytout Fix
  *
@@ -52,6 +55,7 @@
  * @tested          all
  * @valid           true
  */
+
 .hasLayout {
   zoom: 1; }
 
@@ -80,6 +84,7 @@
  * @tested          all
  * @valid           true
  */
+
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -88,11 +93,13 @@
   clear: both;
   height: 0; }
 
-* html .clearfix, *:first-child + html .clearfix {
-  zoom: 1; }
+* {
+  html .clearfix, &:first-child+html .clearfix {
+    zoom: 1; } }
 
 /* IE6 */
 /* IE7 */
+
 /**
  * Absolutize/Originize
  *
@@ -117,6 +124,7 @@
  * @tested          all
  * @valid           true
  */
+
 .absolutize {
   position: absolute; }
 
@@ -146,6 +154,7 @@
  * @tested          all
  * @valid           true
  */
+
 .expose {
   outline: 2px solid        #c30; }
 
@@ -172,9 +181,11 @@
  * @tested          none
  * @valid           true
  */
+
 /**
  * Ascend
  */
+
 .ascend-1 {
   top: -5px; }
 
@@ -208,6 +219,7 @@
 /**
  * Descend 
  */
+
 .descend-1 {
   bottom: -5px; }
 
@@ -241,6 +253,7 @@
 /**
  * Ceiling 
  */
+
 .ceiling-1 {
   padding-top: 5px; }
 
@@ -274,6 +287,7 @@
 /**
  * Floor 
  */
+
 .floor-1 {
   padding-bottom: 5px; }
 
@@ -307,6 +321,7 @@
 /**
  * Attic 
  */
+
 .attic-1 {
   margin-top: 5px; }
 
@@ -340,6 +355,7 @@
 /**
  * Basement 
  */
+
 .basement-1 {
   margin-bottom: 5px; }
 
@@ -373,6 +389,7 @@
 /**
  * Lift 
  */
+
 .lift-1 {
   margin-top: -5px; }
 
@@ -406,6 +423,7 @@
 /**
  * Hoist 
  */
+
 .hoist-1 {
   margin-bottom: -5px; }
 
@@ -459,9 +477,11 @@
  * @tested          none
  * @valid           true
  */
+
 /**
  * Tug: Pulling an Element [from] the Left Some 
  */
+
 .tug-1 {
   margin-left: -5px; }
 
@@ -495,6 +515,7 @@
 /**
  * Nudge: Pushing an Element [from] the Left Some 
  */
+
 .nudge-1 {
   margin-left: 5px; }
 
@@ -528,6 +549,7 @@
 /**
  * Shove: Element Pushing Right Some 
  */
+
 .shove-1 {
   margin-right: 5px; }
 
@@ -561,6 +583,7 @@
 /**
  * Tow: Pulling an Element [from] the Right Some 
  */
+
 .tow-1 {
   margin-right: -5px; }
 
@@ -614,22 +637,26 @@
  * @tested          none
  * @valid           true
  */
+
 /**
  * Image alignment. 
  */
-img.align-right {
-  float: right;
-  margin: 0 0 0 1em; }
-img.align-left {
-  float: left;
-  margin: 0 1em 0 0; }
-img.align-center {
-  display: block;
-  margin: 0 auto; }
+
+img {
+  &.align-right {
+    float: right;
+    margin: 0 0 0 1em; }
+  &.align-left {
+    float: left;
+    margin: 0 1em 0 0; }
+  &.align-center {
+    display: block;
+    margin: 0 auto; } }
 
 /**
  * Text alignment. 
  */
+
 .text-left {
   text-align: left; }
 
@@ -645,6 +672,7 @@ img.align-center {
 /**
  * Vertical Inline Alignment. 
  */
+
 .align-baseline {
   vertical-align: baseline; }
 
@@ -686,6 +714,7 @@ img.align-center {
  * @tested          none
  * @valid           true
  */
+
 .float-left {
   float: left; }
 
@@ -715,6 +744,7 @@ img.align-center {
  * @tested          none
  * @valid           true
  */
+
 .no-margin {
   margin: 0; }
 
@@ -768,12 +798,13 @@ img.align-center {
  * @tested          none
  * @valid           true
  */
+
 .inline {
   display: inline;
-  margin: 0; }
-  .inline li {
+  margin: 0;
+  li {
     display: inline;
-    margin: 0; }
+    margin: 0; } }
 
 /**
  * Sidebar Copy Distillers
@@ -798,15 +829,19 @@ img.align-center {
  * @tested          none
  * @valid           true
  */
+
 /**
  * Across the board
  */
-.distill p, .distill ul, .distill ol, .distill dl {
-  margin: 0; }
+
+.distill {
+  p, ul, ol, dl {
+    margin: 0; } }
 
 /**
  * By element type
  */
+
 .distill-p p, .distill-ul ul, .distill-ol ol, .distill-dl dl {
   margin: 0; }
 
@@ -833,6 +868,7 @@ img.align-center {
  * @tested          none
  * @valid           true
  */
+
 .text-large {
   font-size: 20px; }
 
@@ -874,6 +910,7 @@ img.align-center {
  * @tested          none
  * @valid           true
  */
+
 .clear-all {
   clear: both; }
 

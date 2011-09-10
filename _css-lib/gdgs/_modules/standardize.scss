@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /**
  * GDGS Standardize
  * 
@@ -34,6 +36,7 @@
  * @colordef        #ffffff; White
  * @fontdef         helvetica, arial, sans-serif
  */
+
 /**
  * Color Palette
  *
@@ -59,6 +62,7 @@
  * @tested          all
  * @valid           true
  */
+
 .text-primary-color, .text-secondary-color, .text-tertiary-color, .text-quaternary-color, .text-quinary-color {
   color: #000; }
 
@@ -85,14 +89,21 @@
  * @tested          all
  * @valid           true
  */
+
 /**
  * HTML
  */
+
+html {
+  &.no-js, &.js-enabled {} }
+
 /**
  * Body
  */
+
 body {
-  background: #fff; }
+  background: #fff;
+  &.page-1, &.category-1, &.post-1, &.search {} }
 
 /**
  * Line Breaks
@@ -117,6 +128,7 @@ body {
  * @tested          all
  * @valid           true
  */
+
 br {
   clear: left; }
 
@@ -144,6 +156,7 @@ br {
  * @tested          all
  * @valid           true
  */
+
 div#skip-links {
   position: absolute;
   left: -9999px; }
@@ -171,101 +184,148 @@ div#skip-links {
  * @tested          all
  * @valid           true
  */
+
 /**
  * All Tables
  */
+
 table {
   margin: 0 0 1.5em; }
+
+tr {}
 
 /**
  * Tables' Typesetting Options
  */
+
 table.small {
   font-size: .85em; }
 
 /**
  * All Headers and Cells 
  */
-tr th {
-  padding: 5px; }
-tr td {
-  vertical-align: top;
-  padding: 5px; }
+
+tr {
+  th {
+    padding: 5px; }
+  td {
+    vertical-align: top;
+    padding: 5px; } }
 
 /**
  * First and Last Header 
  */
+
+th {
+  &.first-child, &.last-child {} }
+
 /**
  * First and Last Column 
  */
+
+td {
+  &.first-child, &.last-child {} }
+
 /** 
  * First and Last Row 
  */
+
+tr {
+  &.first-child td, &.last-child td, &.odd-child td, &.even-child td {} }
+
 /**
  * Even and Odd Rows 
  */
+
 /**
  * Head 
  */
-table.alt {
-  background: #fff; }
-  table.alt tr th {
-    background: #FFAC36;
-    border: 1px solid               #D18821; }
-  table.alt tr td {
-    border: 1px solid               #ccc; }
-  table.alt tr.odd-child {
-    background: #e1e1e1; }
-  table.alt tfoot td {
-    border: 1px solid               #FC363F;
-    background: #FF8F94; }
-  table.alt caption {
-    padding: 5px;
-    background: #FFEF8F;
-    border: 1px solid               #DEC946; }
+
+table {
+  thead th, tbody td, tfoot td, caption {}
+  &.alt {
+    background: #fff;
+    tr {
+      th {
+        background: #FFAC36;
+        border: 1px solid               #D18821; }
+      td {
+        border: 1px solid               #ccc; } }
+    th {
+      &.first-child, &.last-child, &.first-child, &.last-child {} }
+    td {
+      &.first-child, &.last-child {} }
+    tr {
+      &.first-child td, &.last-child td {}
+      &.odd-child {
+        background: #e1e1e1;
+        td {} }
+      &.even-child td {} }
+    thead th, tbody td {}
+    tfoot td {
+      border: 1px solid               #FC363F;
+      background: #FF8F94; }
+    caption {
+      padding: 5px;
+      background: #FFEF8F;
+      border: 1px solid               #DEC946; } } }
 
 /**
  * Body 
  */
+
 /**
  * Foot 
  */
+
 /**
  * Caption 
  */
+
 /**
  * Zebra Tables
  */
+
 /**
  * All Headers and Cells 
  */
+
 /**
  * First and Last Header 
  */
+
 /**
  * First and Last Header 
  */
+
 /**
  * First and Last Column 
  */
+
 /**
  * First and Last Row 
  */
+
 /**
  * Even and Odd Rows 
  */
+
 /**
  * Head 
  */
+
 /**
  * Body 
  */
+
 /**
  * Foot 
  */
+
 /**
  * Caption 
  */
+
 /**
  * Form Styleing
  *
@@ -289,6 +349,7 @@ table.alt {
  * @tested          all
  * @valid           true
  */
+
 input, textarea, select {
   padding: 5px 0;
   -moz-box-shadow: #ccc 1px 1px 3px inset;
@@ -300,9 +361,19 @@ input.style-1, select.style-1, textarea.style-1 {
   padding: 5px 5px;
   border: 1px solid               #ccc; }
 
+input {
+  &.text, &.checkbox, &.radio, &.file, &.password, &.button, &.submit, &.image, &.reset {} }
+
+select {
+  &.single, &.multiple {} }
+
+textarea.text, fieldset {}
+
 legend {
   margin: 0 0 1em;
   border-bottom: 3px solid            #FFBB51; }
+
+label {}
 
 /**
  * Buttons
@@ -327,25 +398,28 @@ legend {
  * @tested          all
  * @valid           true
  */
+
 .btn {
   text-decoration: none;
   display: inline-block;
   *zoom: 1;
-  *display: inline; }
-  .btn:link {
+  *display: inline;
+  &:link {
     text-decoration: none;
     display: inline-block;
     *zoom: 1;
     *display: inline; }
-  .btn:hover {
-    text-decoration: none; }
-  .btn:active {
-    text-decoration: none; }
-    .btn:active span, .btn:active input {
+  &:visited {}
+  &:hover {
+    text-decoration: none;
+    span, input {} }
+  &:active {
+    text-decoration: none;
+    span, input {
       -webkit-box-shadow: #F39631 1px 1px 3px inset;
       -moz-box-shadow: #F39631 1px 1px 3px inset;
-      box-shadow: #F39631 1px 1px 3px inset; }
-  .btn span {
+      box-shadow: #F39631 1px 1px 3px inset; } }
+  span {
     text-shadow: 1px 1px 1px    #5F3A12;
     cursor: pointer;
     font-family: sans-serif, Helvetica, Arial;
@@ -353,7 +427,7 @@ legend {
     line-height: 1;
     *zoom: 1;
     *display: inline; }
-  .btn input {
+  input {
     font-size: 12px;
     text-shadow: 1px 1px 1px    #5F3A12;
     cursor: pointer;
@@ -364,18 +438,19 @@ legend {
     -webkit-box-shadow: none;
     box-shadow: none;
     *zoom: 1;
-    *display: inline; }
+    *display: inline; } }
 
-.btn-1 span, .btn-1 input {
-  background: #FFBB51;
-  padding: 5px 10px;
-  border: 1px solid               #AF6F2B;
-  color: #fff;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ef8f2b), color-stop(0.5, #ffac45), color-stop(1, #ffcf61));
-  background: -moz-linear-gradient(center bottom, #ef8f2b 0%, #ffac45 50%, #ffcf61 100%);
-  -moz-border-radius: .5em;
-  -webkit-border-radius: .5em;
-  border-radius: .5em; }
+.btn-1 {
+  span, input {
+    background: #FFBB51;
+    padding: 5px 10px;
+    border: 1px solid               #AF6F2B;
+    color: #fff;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(239, 143, 43)), color-stop(0.5, rgb(255, 172, 69)), color-stop(1, rgb(255, 207, 97)));
+    background: -moz-linear-gradient(center bottom, rgb(239, 143, 43) 0%, rgb(255, 172, 69) 50%, rgb(255, 207, 97) 100%);
+    -moz-border-radius: .5em;
+    -webkit-border-radius: .5em;
+    border-radius: .5em; } }
 
 /**
  * Rounded corners
@@ -400,9 +475,11 @@ legend {
  * @tested          all
  * @valid           true
  */
+
 /**
  * All Around - .5em 
  */
+
 .corners-1 {
   -moz-border-radius: .5em;
   -webkit-border-radius: .5em;
@@ -411,6 +488,7 @@ legend {
 /**
  * Sharp Bottom Left - .5em 
  */
+
 .corners-2 {
   -webkit-border-radius: .5em;
   -webkit-border-bottom-left-radius: 0;
@@ -422,6 +500,7 @@ legend {
 /** 
  * Tombstone - .5em 
  */
+
 .corners-3 {
   -webkit-border-top-left-radius: .5em;
   -webkit-border-top-right-radius: .5em;
@@ -453,6 +532,7 @@ legend {
  * @tested          none
  * @valid           true
  */
+
 .blank, .empty {
   color: #999; }
 
@@ -488,6 +568,7 @@ legend {
  * @tested          none
  * @valid           true
  */
+
 .width-tiny {
   width: 2em; }
 
@@ -547,12 +628,23 @@ legend {
  * @tested          none
  * @valid           true
  */
+
 /**
  * Vertical Forms 
  */
+
+div.form-utility-vertical, .form-field-block, .field-label label {}
+
+.field-input {
+  input, select, textarea {} }
+
 /**
  * Columnar Forms 
  */
+
+dl.form-utility-columnar {
+  & dt.field-label, & dt.field-label label, & dd.field-input, & dd.field-input input, & dd.field-input select, & dd.field-input textarea {} }
+
 /**
  * Page separators
  *
@@ -576,9 +668,11 @@ legend {
  * @tested          none
  * @valid           true
  */
+
 hr {
   border: none;
-  border-top: 1px #ccc solid; }
+  border-top: 1px #ccc solid;
+  &.page-separator, &.page-separator-1, &.page-separator-2, &.page-separator-3 {} }
 
 /**
  * Wrappers
@@ -603,6 +697,9 @@ hr {
  * @tested          none
  * @valid           true
  */
+
+.wrapper-1, .wrapper-2, .wrapper-3 {}
+
 /**
  * Header Wrappers
  *
@@ -626,6 +723,10 @@ hr {
  * @tested          none
  * @valid           true
  */
+
+div {
+  &.header-1, &.header-2, &.header-3 {} }
+
 /**
  * Headers
  *
@@ -649,6 +750,25 @@ hr {
  * @tested          none
  * @valid           true
  */
+
+h1 {
+  &.header-1, &.header-2, &.header-3 {} }
+
+h2 {
+  &.header-1, &.header-2, &.header-3 {} }
+
+h3 {
+  &.header-1, &.header-2, &.header-3 {} }
+
+h4 {
+  &.header-1, &.header-2, &.header-3 {} }
+
+h5 {
+  &.header-1, &.header-2, &.header-3 {} }
+
+h6 {
+  &.header-1, &.header-2, &.header-3 {} }
+
 /**
  * Anchors
  *
@@ -672,13 +792,16 @@ hr {
  * @tested          all
  * @valid           true
  */
+
 a {
-  outline: none; }
-  a:link {
+  outline: none;
+  &:link {
     outline: none; }
-  a:hover {
+  &:visited {}
+  &:hover {
     text-decoration: underline; }
-  a img {
-    border: none; }
+  &:active {}
+  img {
+    border: none; } }
 
 /* End of _modules/standardize.css */

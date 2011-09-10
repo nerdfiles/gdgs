@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /**
  * GDGS System
  * 
@@ -31,6 +33,7 @@
  * @tested          all
  * @valid           true
  */
+
 /**
  * Column guides
  *
@@ -54,6 +57,7 @@
  * @tested          all
  * @valid           true
  */
+
 .show-guide-16 {
   background: url(../_img-ui/16-column-guide.gif) center 0 repeat-y; }
 
@@ -80,50 +84,51 @@
  * @tested          all
  * @valid           true
  */
+
 body {
   min-width: 960px; }
 
 .column-layout {
   width: 960px;
   margin-left: auto;
-  margin-right: auto; }
-  .column-layout .columns-1, .column-layout .columns-2, .column-layout .columns-3, .column-layout .columns-4, .column-layout .columns-5, .column-layout .columns-6, .column-layout .columns-7, .column-layout .columns-8, .column-layout .columns-9, .column-layout .columns-10, .column-layout .columns-11, .column-layout .columns-12, .column-layout .columns-13, .column-layout .columns-14, .column-layout .columns-15, .column-layout .columns-16 {
+  margin-right: auto;
+  .columns-1, .columns-2, .columns-3, .columns-4, .columns-5, .columns-6, .columns-7, .columns-8, .columns-9, .columns-10, .columns-11, .columns-12, .columns-13, .columns-14, .columns-15, .columns-16 {
     display: inline;
     float: left;
     margin-left: 10px;
     margin-right: 10px; }
-  .column-layout .columns-1 {
+  .columns-1 {
     width: 40px; }
-  .column-layout .columns-2 {
+  .columns-2 {
     width: 100px; }
-  .column-layout .columns-3 {
+  .columns-3 {
     width: 160px; }
-  .column-layout .columns-4 {
+  .columns-4 {
     width: 220px; }
-  .column-layout .columns-5 {
+  .columns-5 {
     width: 280px; }
-  .column-layout .columns-6 {
+  .columns-6 {
     width: 340px; }
-  .column-layout .columns-7 {
+  .columns-7 {
     width: 400px; }
-  .column-layout .columns-8 {
+  .columns-8 {
     width: 460px; }
-  .column-layout .columns-9 {
+  .columns-9 {
     width: 520px; }
-  .column-layout .columns-10 {
+  .columns-10 {
     width: 580px; }
-  .column-layout .columns-11 {
+  .columns-11 {
     width: 640px; }
-  .column-layout .columns-12 {
+  .columns-12 {
     width: 700px; }
-  .column-layout .columns-13 {
+  .columns-13 {
     width: 760px; }
-  .column-layout .columns-14 {
+  .columns-14 {
     width: 820px; }
-  .column-layout .columns-15 {
+  .columns-15 {
     width: 880px; }
-  .column-layout .columns-16 {
-    width: 940px; }
+  .columns-16 {
+    width: 940px; } }
 
 /**
  * Columns
@@ -148,6 +153,7 @@ body {
  * @tested          all
  * @valid           true
  */
+
 /**
  * Column widths
  *
@@ -171,6 +177,7 @@ body {
  * @tested          all
  * @valid           true
  */
+
 /**
  * Horizontal Controls (Macro-Level)
  *
@@ -194,15 +201,18 @@ body {
  * @tested          all
  * @valid           true
  */
+
 /**
  * Haul and Propel 
  */
+
 .haul-1, .propel-1, .haul-2, .propel-2.haul-3, .propel-3, .haul-4, .propel-4, .haul-5, .propel-5, .haul-6, .propel-6, .haul-7, .propel-7, .haul-8, .propel-8, .haul-9, .propel-9, .haul-10, .propel-10, .haul-11, .propel-11, .haul-12, .propel-12, .haul-13, .propel-13, .haul-14, .propel-14, .haul-15, .propel-15 {
   position: relative; }
 
 /**
  * Column - Haul (Above Flow) 
  */
+
 .haul-1 {
   left: -60px; }
 
@@ -251,6 +261,7 @@ body {
 /**
  * Column - Propel (Above Flow) 
  */
+
 .propel-1 {
   left: 60px; }
 
@@ -299,6 +310,7 @@ body {
 /**
  * Column - Prepend (In Flow) 
  */
+
 .prepend-1 {
   padding-left: 60px; }
 
@@ -347,6 +359,7 @@ body {
 /**
  * Column - Append (In Flow) 
  */
+
 .append-1 {
   padding-right: 60px; }
 
@@ -395,6 +408,7 @@ body {
 /** 
  * Column - Push - Pushing a Sibling (In Flow) 
  */
+
 .push-1 {
   margin-right: 90px; }
 
@@ -428,6 +442,7 @@ body {
 /**
  * Column - Pull - Pulling a Sibling (In Flow) 
  */
+
 .pull-1 {
   margin-right: -90px; }
 
@@ -461,6 +476,7 @@ body {
 /**
  * Column - Jump - Jumping an Element (In Flow) 
  */
+
 .jump-1 {
   margin-left: 90px; }
 
@@ -494,6 +510,7 @@ body {
 /**
  * Column - Withdraw - Withdrawing an Element (In Flow) 
  */
+
 .withdraw-1 {
   margin-left: -90px; }
 
@@ -547,9 +564,11 @@ body {
  * @tested          all
  * @valid           true
  */
-.column-layout .begin {
-  margin-left: 0 !important; }
-.column-layout .end {
-  margin-right: 0 !important; }
+
+.column-layout {
+  .begin {
+    margin-left: 0 !important; }
+  .end {
+    margin-right: 0 !important; } }
 
 /* End of _modules/system.css */

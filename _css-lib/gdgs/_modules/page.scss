@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /**
  * GDGS Page
  * 
@@ -29,6 +31,7 @@
  * @tested          all
  * @valid           true
  */
+
 /**
  * At-rule: Page
  *
@@ -52,9 +55,20 @@
  * @tested          all
  * @valid           true
  */
+
 @page {}
+
+
 @page land {}
+
+
 @page :left {}
+
+
 @page :right {}
+
+
 @page :first {}
+
+
 /* End of _modules/page.css */

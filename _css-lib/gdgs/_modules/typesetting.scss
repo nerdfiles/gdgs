@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /**
  * GDGS Typesetting
  * 
@@ -29,6 +31,7 @@
  * @tested          all
  * @valid           true
  */
+
 /**
  * Document Typesetting
  *
@@ -52,9 +55,11 @@
  * @tested          all
  * @valid           true
  */
+
 /**
  * Context
  */
+
 body {
   font-size: 75%;
   color: #000;
@@ -68,6 +73,7 @@ body {
 /**
  * Global Typesetting
  */
+
 p, ul, ol, dl, input, textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
@@ -78,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Headings Typesetting
  */
+
 h1 {
   font-size: 3em;
   line-height: 1;
@@ -127,6 +134,7 @@ h6 {
  * @tested          all
  * @valid           true
  */
+
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, input, textarea {
   text-rendering: optimizeLegibility !important; }
 
@@ -153,6 +161,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, input, textarea {
  * @tested          all
  * @valid           true
  */
+
 p {
   margin: 0 0 1.5em; }
 
@@ -166,11 +175,11 @@ ol {
   list-style-type: decimal; }
 
 dl {
-  margin: 0 0 1.5em 0; }
-  dl dt {
+  margin: 0 0 1.5em 0;
+  dt {
     font-weight: bold; }
-  dl dd {
-    margin-left: 1.5em; }
+  dd {
+    margin-left: 1.5em; } }
 
 abbr, acronym {
   border-bottom: 1px dotted #000; }
