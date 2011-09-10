@@ -73,22 +73,21 @@
     /**
      * Global Typesetting
      */
-    
+        
     body,
-    h1,h2,h3,h4,h5,h6,
     p,
     ul,ol,dl,
     input,textarea { 
-        font-family: sans-serif, Helvetica, Arial; }
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+        
+    h1,h2,h3,h4,h5,h6 { 
+        font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: normal; }
     
     /**
      * Headings Typesetting
      */
-    
-    h1,h2,h3,h4,h5,h6 { 
-        font-family: "Bergamo", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; 
-        font-weight: normal; }
-    
+
     h1 { 
         font-size: 3em; 
         line-height: 1; 

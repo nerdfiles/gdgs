@@ -112,15 +112,6 @@
  * @valid           true
  */
 
-    @font-face {
-        font-family: 'Bergamo';
-        src:    url('../../_fonts/bergamo/BergamoStd-Regular-webfont.eot');  /* IE6+ */
-        src:    local('?'), 
-                url('../../_fonts/bergamo/BergamoStd-Regular-webfont.woff') format('woff'),  /* FF3.6 */
-                url('../../_fonts/bergamo/BergamoStd-Regular-webfont.ttf') format('truetype'),
-                url('../../_fonts/bergamo/BergamoStd-Regular-webfont.svg#webfontwfBzOZwD') format('svg');  /* Saf3+,Chrome,FF3.5,Opera10+ */
-        font-weight: normal;
-        font-style: normal;
-    }
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
     
 /* End of _modules/font.css */
