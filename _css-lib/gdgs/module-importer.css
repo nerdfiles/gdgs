@@ -1,9 +1,3593 @@
-@import "../../../reset.css";
-@import "_modules/font.css";
-@import "_modules/typesetting.css";
-@import "_modules/system.css";
-@import "_modules/form.css";
-@import "_modules/tools.css";
-@import "_modules/table.css";
-@import "_modules/bounds.css";
-@import "_modules/standardize.css";
+/**
+ * Reset (Modified HTML5 Boilerplate)
+ * 
+ * Reset...
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-core
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Complete cssdoc implementation.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ * 
+ * @credits         Much inspiration was taken from these projects:
+ *                      - yui.yahooapis.com/2.8.1/build/base/base.css
+ *                      - camendesign.com/design/
+ *                      - praegnanz.de/weblog/htmlcssjs-kickstart
+ * @source          html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ *                  v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ *                  html5doctor.com/html-5-reset-stylesheet/
+ */
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+audio[controls], canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.231;
+  font-family: sans-serif;
+  color: #222; }
+
+button, input, select, textarea {
+  font-family: sans-serif;
+  color: #222; }
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+::-moz-selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none; }
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #00e; }
+
+a:visited {
+  color: #551a8b; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  outline: 0; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+/* =============================================================================
+   Typography
+   ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+small {
+  font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+nav ul, nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+figure, form {
+  margin: 0; }
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+button, input {
+  line-height: normal;
+  *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+button {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box; }
+
+input[type="search"] {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* Colors for form validity */
+input:invalid, textarea:invalid {
+  background-color: #f0dddd; }
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* =============================================================================
+   Primary styles
+   Author: 
+   ========================================================================== */
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+.ir br {
+  display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:before {
+    content: "";
+    display: table; }
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* End of _modules/reset.css */
+/**
+ * GDGS Font
+ * 
+ * ...
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-optional
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Font Embeds Template
+ *
+ * USAGE:
+ * Usually put on .begin, instead of .columns-X, and on elements direct descendants to a .bulwark
+ * "element.columns-X.end" may look odd, when nested under a .bulwark, but it works.
+ *
+ * * RESOURCES
+ *
+ * 1. http://www.awayback.com/revised-font-stack/
+ * 2. http://media.24ways.org/2007/17/fontmatrix.html
+ *
+ * SERIF FONT STACKS
+ *
+ * GARAMOND:        Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+ * LUCIDA BRIGHT:   "Lucida Bright", Georgia, serif;
+ * PALATINO:        Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+ * BIG CASLON:      "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+ * DIDOT:           Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+ * BASKERVILLE:     Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif;
+ * HOEFLER TEXT:    "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+ * BODONI:          "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+ * GOUDY OLD STYLE: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+ * CONSTANTIA:      Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+ * CAMBRIA:         Cambria, Georgia, serif;
+ * BOOK ANTIQUA:    "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+ * CLARENDON:       "Clarendon Std", "Century Old Style Std", "Century Schoolbook", Georgia, serif;
+ *
+ * SANS-SERIF FONT STACKS
+ *
+ * OPTIMA:          Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+ * FUTURA:          Futura, "Trebuchet MS", Arial, sans-serif;
+ * GILL SANS:       "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+ * TREBUCHET:       "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+ * HELVETICA NEUE:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+ * VERDANA:         Verdana, Geneva, sans-serif;
+ * LUCIDA GRANDE:   "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+ * GENEVA:          Geneva, Tahoma, Verdana, sans-serif;
+ * SEGOE:           Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+ * CANDARA:         Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+ * CALIBRI:         Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+ * FRANKLIN GOTHIC: "Franklin Gothic Medium", Arial, sans-serif;
+ * TAHOMA:          Tahoma, Geneva, Verdana, sans-serif;
+ *
+ * 8 DEFINITIVE FONT STACKS
+ *
+ * "Times":         Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+ * "Georgia":       Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif," "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+ * "Garamond":      "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+ * "Helvetica":     Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ * "Verdana":       Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+ * "Trebuchet":     "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+ * "Impact":        Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+ * "Monospace":     Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+ *
+ * OTHER FONT STACKS:
+ *
+ * 960.GS:          'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+ * 
+ * @section:        modules
+ * @subsection      support
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Find more fonts?
+ * @see             http://www.font-face.com
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+/* End of _modules/font.css */
+/**
+ * GDGS Typesetting
+ * 
+ * Typesetting...
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-core
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            None.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Document Typesetting
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Context
+ */
+body {
+  font-size: 75%;
+  color: #000;
+  line-height: 1.5;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: left;
+  white-space: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/**
+ * Global Typesetting
+ */
+p, ul, ol, dl, input, textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal; }
+
+/**
+ * Headings Typesetting
+ */
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em; }
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em; }
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em; }
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em; }
+
+h5 {
+  font-size: 1em;
+  margin-bottom: 1.5em; }
+
+h6 {
+  font-size: 1em; }
+
+/**
+ * Optimize Legibility
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         chrome, firefox, opera, safari
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, input, textarea {
+  text-rendering: optimizeLegibility !important; }
+
+/**
+ * Text Elements
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+p {
+  margin: 0 0 1.5em; }
+
+ul, ol {
+  margin: 0 1.5em 1.5em 1.5em; }
+
+ul {
+  list-style-type: circle; }
+
+ol {
+  list-style-type: decimal; }
+
+dl {
+  margin: 0 0 1.5em 0; }
+  dl dt {
+    font-weight: bold; }
+  dl dd {
+    margin-left: 1.5em; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #000; }
+
+address {
+  margin-top: 1.5em;
+  font-style: italic; }
+
+del {
+  color: #000; }
+
+blockquote {
+  margin: 1.5em; }
+
+b, strong {
+  font-weight: bold; }
+
+i, em {
+  font-style: italic; }
+
+dfn {
+  font-style: italic;
+  font-weight: bold; }
+
+pre, code {
+  margin: 1.5em 0;
+  white-space: pre; }
+
+pre, code {
+  font: 1em monospace;
+  line-height: 1.5; }
+
+tt {
+  font: 1em monospace;
+  line-height: 1.5;
+  display: block;
+  margin: 1.5em 0;
+  line-height: 1.5; }
+
+span.amp {
+  font-family: Baskerville, Palatino, "Book Antiqua", serif;
+  font-style: italic; }
+
+/* End of typesetting.css */
+/**
+ * GDGS System
+ * 
+ * The grid system (and not the "framework"). 
+ * By "extension" I mean reaching GDGS into standard elements. 
+ * Bounds is "support" for GDGS itself, grid elements.
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-core
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            None.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Column guides
+ *
+ * Column guides
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.show-guide-16 {
+  background: url(_img-ui/16-column-guide.gif) center 0 repeat-y; }
+
+/**
+ * Column context
+ *
+ * Column context
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+body {
+  min-width: 960px; }
+
+.column-layout {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+  .column-layout .columns-1, .column-layout .columns-2, .column-layout .columns-3, .column-layout .columns-4, .column-layout .columns-5, .column-layout .columns-6, .column-layout .columns-7, .column-layout .columns-8, .column-layout .columns-9, .column-layout .columns-10, .column-layout .columns-11, .column-layout .columns-12, .column-layout .columns-13, .column-layout .columns-14, .column-layout .columns-15, .column-layout .columns-16 {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px; }
+  .column-layout .columns-1 {
+    width: 40px; }
+  .column-layout .columns-2 {
+    width: 100px; }
+  .column-layout .columns-3 {
+    width: 160px; }
+  .column-layout .columns-4 {
+    width: 220px; }
+  .column-layout .columns-5 {
+    width: 280px; }
+  .column-layout .columns-6 {
+    width: 340px; }
+  .column-layout .columns-7 {
+    width: 400px; }
+  .column-layout .columns-8 {
+    width: 460px; }
+  .column-layout .columns-9 {
+    width: 520px; }
+  .column-layout .columns-10 {
+    width: 580px; }
+  .column-layout .columns-11 {
+    width: 640px; }
+  .column-layout .columns-12 {
+    width: 700px; }
+  .column-layout .columns-13 {
+    width: 760px; }
+  .column-layout .columns-14 {
+    width: 820px; }
+  .column-layout .columns-15 {
+    width: 880px; }
+  .column-layout .columns-16 {
+    width: 940px; }
+
+/**
+ * Columns
+ *
+ * Columns
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Column widths
+ *
+ * Column widths
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Horizontal Controls (Macro-Level)
+ *
+ * Your guess is not as good as mine!
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Haul and Propel 
+ */
+.haul-1, .propel-1, .haul-2, .propel-2.haul-3, .propel-3, .haul-4, .propel-4, .haul-5, .propel-5, .haul-6, .propel-6, .haul-7, .propel-7, .haul-8, .propel-8, .haul-9, .propel-9, .haul-10, .propel-10, .haul-11, .propel-11, .haul-12, .propel-12, .haul-13, .propel-13, .haul-14, .propel-14, .haul-15, .propel-15 {
+  position: relative; }
+
+/**
+ * Column - Haul (Above Flow) 
+ */
+.haul-1 {
+  left: -60px; }
+
+.haul-2 {
+  left: -120px; }
+
+.haul-3 {
+  left: -180px; }
+
+.haul-4 {
+  left: -240px; }
+
+.haul-5 {
+  left: -300px; }
+
+.haul-6 {
+  left: -360px; }
+
+.haul-7 {
+  left: -420px; }
+
+.haul-8 {
+  left: -480px; }
+
+.haul-9 {
+  left: -540px; }
+
+.haul-10 {
+  left: -600px; }
+
+.haul-11 {
+  left: -660px; }
+
+.haul-12 {
+  left: -720px; }
+
+.haul-13 {
+  left: -780px; }
+
+.haul-14 {
+  left: -840px; }
+
+.haul-15 {
+  left: -900px; }
+
+/**
+ * Column - Propel (Above Flow) 
+ */
+.propel-1 {
+  left: 60px; }
+
+.propel-2 {
+  left: 120px; }
+
+.propel-3 {
+  left: 180px; }
+
+.propel-4 {
+  left: 240px; }
+
+.propel-5 {
+  left: 300px; }
+
+.propel-6 {
+  left: 360px; }
+
+.propel-7 {
+  left: 420px; }
+
+.propel-8 {
+  left: 480px; }
+
+.propel-9 {
+  left: 540px; }
+
+.propel-10 {
+  left: 600px; }
+
+.propel-11 {
+  left: 660px; }
+
+.propel-12 {
+  left: 720px; }
+
+.propel-13 {
+  left: 780px; }
+
+.propel-14 {
+  left: 840px; }
+
+.propel-15 {
+  left: 900px; }
+
+/**
+ * Column - Prepend (In Flow) 
+ */
+.prepend-1 {
+  padding-left: 60px; }
+
+.prepend-2 {
+  padding-left: 120px; }
+
+.prepend-3 {
+  padding-left: 180px; }
+
+.prepend-4 {
+  padding-left: 240px; }
+
+.prepend-5 {
+  padding-left: 300px; }
+
+.prepend-6 {
+  padding-left: 360px; }
+
+.prepend-7 {
+  padding-left: 420px; }
+
+.prepend-8 {
+  padding-left: 480px; }
+
+.prepend-9 {
+  padding-left: 540px; }
+
+.prepend-10 {
+  padding-left: 600px; }
+
+.prepend-11 {
+  padding-left: 660px; }
+
+.prepend-12 {
+  padding-left: 720px; }
+
+.prepend-13 {
+  padding-left: 780px; }
+
+.prepend-14 {
+  padding-left: 840px; }
+
+.prepend-15 {
+  padding-left: 900px; }
+
+/**
+ * Column - Append (In Flow) 
+ */
+.append-1 {
+  padding-right: 60px; }
+
+.append-2 {
+  padding-right: 120px; }
+
+.append-3 {
+  padding-right: 180px; }
+
+.append-4 {
+  padding-right: 240px; }
+
+.append-5 {
+  padding-right: 300px; }
+
+.append-6 {
+  padding-right: 360px; }
+
+.append-7 {
+  padding-right: 420px; }
+
+.append-8 {
+  padding-right: 480px; }
+
+.append-9 {
+  padding-right: 540px; }
+
+.append-10 {
+  padding-right: 600px; }
+
+.append-11 {
+  padding-right: 660px; }
+
+.append-12 {
+  padding-right: 720px; }
+
+.append-13 {
+  padding-right: 780px; }
+
+.append-14 {
+  padding-right: 840px; }
+
+.append-15 {
+  padding-right: 900px; }
+
+/** 
+ * Column - Push - Pushing a Sibling (In Flow) 
+ */
+.push-1 {
+  margin-right: 90px; }
+
+.push-2 {
+  margin-right: 170px; }
+
+.push-3 {
+  margin-right: 250px; }
+
+.push-4 {
+  margin-right: 330px; }
+
+.push-5 {
+  margin-right: 410px; }
+
+.push-6 {
+  margin-right: 490px; }
+
+.push-7 {
+  margin-right: 570px; }
+
+.push-8 {
+  margin-right: 650px; }
+
+.push-9 {
+  margin-right: 730px; }
+
+.push-10 {
+  margin-right: 810px; }
+
+/**
+ * Column - Pull - Pulling a Sibling (In Flow) 
+ */
+.pull-1 {
+  margin-right: -90px; }
+
+.pull-2 {
+  margin-right: -170px; }
+
+.pull-3 {
+  margin-right: -250px; }
+
+.pull-4 {
+  margin-right: -330px; }
+
+.pull-5 {
+  margin-right: -410px; }
+
+.pull-6 {
+  margin-right: -490px; }
+
+.pull-7 {
+  margin-right: -570px; }
+
+.pull-8 {
+  margin-right: -650px; }
+
+.pull-9 {
+  margin-right: -730px; }
+
+.pull-10 {
+  margin-right: -810px; }
+
+/**
+ * Column - Jump - Jumping an Element (In Flow) 
+ */
+.jump-1 {
+  margin-left: 90px; }
+
+.jump-2 {
+  margin-left: 170px; }
+
+.jump-3 {
+  margin-left: 250px; }
+
+.jump-4 {
+  margin-left: 330px; }
+
+.jump-5 {
+  margin-left: 410px; }
+
+.jump-6 {
+  margin-left: 490px; }
+
+.jump-7 {
+  margin-left: 570px; }
+
+.jump-8 {
+  margin-left: 650px; }
+
+.jump-9 {
+  margin-left: 730px; }
+
+.jump-10 {
+  margin-left: 810px; }
+
+/**
+ * Column - Withdraw - Withdrawing an Element (In Flow) 
+ */
+.withdraw-1 {
+  margin-left: -90px; }
+
+.withdraw-2 {
+  margin-left: -170px; }
+
+.withdraw-3 {
+  margin-left: -250px; }
+
+.withdraw-4 {
+  margin-left: -330px; }
+
+.withdraw-5 {
+  margin-left: -410px; }
+
+.withdraw-6 {
+  margin-left: -490px; }
+
+.withdraw-7 {
+  margin-left: -570px; }
+
+.withdraw-8 {
+  margin-left: -650px; }
+
+.withdraw-9 {
+  margin-left: -730px; }
+
+.withdraw-10 {
+  margin-left: -810px; }
+
+/**
+ * Beginning/Ending Columns
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            None.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.column-layout .begin {
+  margin-left: 0 !important; }
+.column-layout .end {
+  margin-right: 0 !important; }
+
+/* End of _modules/system.css */
+/**
+ * GDGS Form
+ * 
+ * Form, like Table, should be optional and an extension.
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-optional
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            None.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Bulwarking Forms 
+ *
+ * e.g., .bulwark-1, .bulwark-2, and so on...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.column-layout .bulwark-1 input.bulwark-1-columns-1 {
+  width: 35px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-2 {
+  width: 95px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-3 {
+  width: 155px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-4 {
+  width: 215px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-5 {
+  width: 275px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-6 {
+  width: 335px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-7 {
+  width: 395px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-8 {
+  width: 455px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-9 {
+  width: 515px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-10 {
+  width: 575px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-11 {
+  width: 635px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-12 {
+  width: 695px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-13 {
+  width: 755px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-14 {
+  width: 815px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-15 {
+  width: 875px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-16 {
+  width: 935px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-1-style-1 {
+  width: 23px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-2-style-1 {
+  width: 83px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-3-style-1 {
+  width: 143px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-4-style-1 {
+  width: 203px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-5-style-1 {
+  width: 263px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-6-style-1 {
+  width: 323px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-7-style-1 {
+  width: 383px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-8-style-1 {
+  width: 443px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-9-style-1 {
+  width: 503px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-10-style-1 {
+  width: 563px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-11-style-1 {
+  width: 623px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-12-style-1 {
+  width: 683px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-13-style-1 {
+  width: 743px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-14-style-1 {
+  width: 803px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-15-style-1 {
+  width: 863px; }
+.column-layout .bulwark-1 input.bulwark-1-columns-16-style-1 {
+  width: 923px; }
+.column-layout input.columns-1-style-1 {
+  width: 28px; }
+.column-layout input.columns-2-style-1 {
+  width: 88px; }
+.column-layout input.columns-3-style-1 {
+  width: 148px; }
+.column-layout input.columns-4-style-1 {
+  width: 208px; }
+.column-layout input.columns-5-style-1 {
+  width: 268px; }
+.column-layout input.columns-6-style-1 {
+  width: 328px; }
+.column-layout input.columns-7-style-1 {
+  width: 388px; }
+.column-layout input.columns-8-style-1 {
+  width: 448px; }
+.column-layout input.columns-9-style-1 {
+  width: 508px; }
+.column-layout input.columns-10-style-1 {
+  width: 568px; }
+.column-layout input.columns-11-style-1 {
+  width: 628px; }
+.column-layout input.columns-12-style-1 {
+  width: 688px; }
+.column-layout input.columns-13-style-1 {
+  width: 748px; }
+.column-layout input.columns-14-style-1 {
+  width: 808px; }
+.column-layout input.columns-15-style-1 {
+  width: 868px; }
+.column-layout input.columns-16-style-1 {
+  width: 928px; }
+.column-layout label.columns-1, .column-layout label.columns-2, .column-layout label.columns-3, .column-layout label.columns-4, .column-layout label.columns-5, .column-layout label.columns-6, .column-layout label.columns-7, .column-layout label.columns-8, .column-layout label.columns-9, .column-layout label.columns-10, .column-layout label.columns-11, .column-layout label.columns-12, .column-layout label.columns-13, .column-layout label.columns-14, .column-layout label.columns-15, .column-layout label.columns-16 {
+  position: relative;
+  top: -4px; }
+.column-layout dt label.columns-1, .column-layout dt label.columns-2, .column-layout dt label.columns-3, .column-layout dt label.columns-4, .column-layout dt label.columns-5, .column-layout dt label.columns-6, .column-layout dt label.columns-7, .column-layout dt label.columns-8, .column-layout dt label.columns-9, .column-layout dt label.columns-10, .column-layout dt label.columns-11, .column-layout dt label.columns-12, .column-layout dt label.columns-13, .column-layout dt label.columns-14, .column-layout dt label.columns-15, .column-layout dt label.columns-16 {
+  position: relative;
+  top: 4px; }
+
+/**
+ * Form Field Widths
+ *
+ * e.g., input.columns-1-style-1, input.columns-1-style-2, and so on...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Form Field Vertical Position
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/* End of _modules/form.css */
+/**
+ * GDGS Tools
+ * 
+ * ...
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-optional
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            None.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * IE: hasLaytout Fix
+ *
+ * For Trident engines.
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.hasLayout {
+  zoom: 1; }
+
+/**
+ * Clearfix
+ *
+ * Without additional markup.
+ * Don't you love seeing the filled in container
+ * within your DOM Inspector?
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix, *:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+/* IE7 */
+/**
+ * Absolutize/Originize
+ *
+ * For using absolute positioning at any container
+ * within a layout.
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.absolutize {
+  position: absolute; }
+
+.originize {
+  position: relative; }
+
+/**
+ * Diagnostics
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         non-trident
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.expose {
+  outline: 2px solid        #c30; }
+
+/**
+ * Vertical Controls (Micro-level)
+ *
+ * Macro-level vertical controls do not exist!
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Ascend
+ */
+.ascend-1 {
+  top: -5px; }
+
+.ascend-2 {
+  top: -10px; }
+
+.ascend-3 {
+  top: -15px; }
+
+.ascend-4 {
+  top: -20px; }
+
+.ascend-5 {
+  top: -25px; }
+
+.ascend-6 {
+  top: -30px; }
+
+.ascend-7 {
+  top: -35px; }
+
+.ascend-8 {
+  top: -40px; }
+
+.ascend-9 {
+  top: -45px; }
+
+.ascend-10 {
+  top: -50px; }
+
+/**
+ * Descend 
+ */
+.descend-1 {
+  bottom: -5px; }
+
+.descend-2 {
+  bottom: -10px; }
+
+.descend-3 {
+  bottom: -15px; }
+
+.descend-4 {
+  bottom: -20px; }
+
+.descend-5 {
+  bottom: -25px; }
+
+.descend-6 {
+  bottom: -30px; }
+
+.descend-7 {
+  bottom: -35px; }
+
+.descend-8 {
+  bottom: -40px; }
+
+.descend-9 {
+  bottom: -45px; }
+
+.descend-10 {
+  bottom: -50px; }
+
+/**
+ * Ceiling 
+ */
+.ceiling-1 {
+  padding-top: 5px; }
+
+.ceiling-2 {
+  padding-top: 10px; }
+
+.ceiling-3 {
+  padding-top: 15px; }
+
+.ceiling-4 {
+  padding-top: 20px; }
+
+.ceiling-5 {
+  padding-top: 25px; }
+
+.ceiling-6 {
+  padding-top: 30px; }
+
+.ceiling-7 {
+  padding-top: 35px; }
+
+.ceiling-8 {
+  padding-top: 40px; }
+
+.ceiling-9 {
+  padding-top: 45px; }
+
+.ceiling-10 {
+  padding-top: 50px; }
+
+/**
+ * Floor 
+ */
+.floor-1 {
+  padding-bottom: 5px; }
+
+.floor-2 {
+  padding-bottom: 10px; }
+
+.floor-3 {
+  padding-bottom: 15px; }
+
+.floor-4 {
+  padding-bottom: 20px; }
+
+.floor-5 {
+  padding-bottom: 25px; }
+
+.floor-6 {
+  padding-bottom: 30px; }
+
+.floor-7 {
+  padding-bottom: 35px; }
+
+.floor-8 {
+  padding-bottom: 40px; }
+
+.floor-9 {
+  padding-bottom: 45px; }
+
+.floor-10 {
+  padding-bottom: 50px; }
+
+/**
+ * Attic 
+ */
+.attic-1 {
+  margin-top: 5px; }
+
+.attic-2 {
+  margin-top: 10px; }
+
+.attic-3 {
+  margin-top: 15px; }
+
+.attic-4 {
+  margin-top: 20px; }
+
+.attic-5 {
+  margin-top: 25px; }
+
+.attic-6 {
+  margin-top: 30px; }
+
+.attic-7 {
+  margin-top: 35px; }
+
+.attic-8 {
+  margin-top: 40px; }
+
+.attic-9 {
+  margin-top: 45px; }
+
+.attic-10 {
+  margin-top: 50px; }
+
+/**
+ * Basement 
+ */
+.basement-1 {
+  margin-bottom: 5px; }
+
+.basement-2 {
+  margin-bottom: 10px; }
+
+.basement-3 {
+  margin-bottom: 15px; }
+
+.basement-4 {
+  margin-bottom: 20px; }
+
+.basement-5 {
+  margin-bottom: 25px; }
+
+.basement-6 {
+  margin-bottom: 30px; }
+
+.basement-7 {
+  margin-bottom: 35px; }
+
+.basement-8 {
+  margin-bottom: 40px; }
+
+.basement-9 {
+  margin-bottom: 45px; }
+
+.basement-10 {
+  margin-bottom: 50px; }
+
+/**
+ * Lift 
+ */
+.lift-1 {
+  margin-top: -5px; }
+
+.lift-2 {
+  margin-top: -10px; }
+
+.lift-3 {
+  margin-top: -15px; }
+
+.lift-4 {
+  margin-top: -20px; }
+
+.lift-5 {
+  margin-top: -25px; }
+
+.lift-6 {
+  margin-top: -30px; }
+
+.lift-7 {
+  margin-top: -35px; }
+
+.lift-8 {
+  margin-top: -40px; }
+
+.lift-9 {
+  margin-top: -45px; }
+
+.lift-10 {
+  margin-top: -50px; }
+
+/**
+ * Hoist 
+ */
+.hoist-1 {
+  margin-bottom: -5px; }
+
+.hoist-2 {
+  margin-bottom: -10px; }
+
+.hoist-3 {
+  margin-bottom: -15px; }
+
+.hoist-4 {
+  margin-bottom: -20px; }
+
+.hoist-5 {
+  margin-bottom: -25px; }
+
+.hoist-6 {
+  margin-bottom: -30px; }
+
+.hoist-7 {
+  margin-bottom: -35px; }
+
+.hoist-8 {
+  margin-bottom: -40px; }
+
+.hoist-9 {
+  margin-bottom: -45px; }
+
+.hoist-10 {
+  margin-bottom: -50px; }
+
+/**
+ * Horizontal Controls (Micro-level)
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Tug: Pulling an Element [from] the Left Some 
+ */
+.tug-1 {
+  margin-left: -5px; }
+
+.tug-2 {
+  margin-left: -10px; }
+
+.tug-3 {
+  margin-left: -15px; }
+
+.tug-4 {
+  margin-left: -20px; }
+
+.tug-5 {
+  margin-left: -25px; }
+
+.tug-6 {
+  margin-left: -30px; }
+
+.tug-7 {
+  margin-left: -35px; }
+
+.tug-8 {
+  margin-left: -40px; }
+
+.tug-9 {
+  margin-left: -45px; }
+
+.tug-10 {
+  margin-left: -50px; }
+
+/**
+ * Nudge: Pushing an Element [from] the Left Some 
+ */
+.nudge-1 {
+  margin-left: 5px; }
+
+.nudge-2 {
+  margin-left: 10px; }
+
+.nudge-3 {
+  margin-left: 15px; }
+
+.nudge-4 {
+  margin-left: 20px; }
+
+.nudge-5 {
+  margin-left: 25px; }
+
+.nudge-6 {
+  margin-left: 30px; }
+
+.nudge-7 {
+  margin-left: 35px; }
+
+.nudge-8 {
+  margin-left: 40px; }
+
+.nudge-9 {
+  margin-left: 45px; }
+
+.nudge-10 {
+  margin-left: 50px; }
+
+/**
+ * Shove: Element Pushing Right Some 
+ */
+.shove-1 {
+  margin-right: 5px; }
+
+.shove-2 {
+  margin-right: 10px; }
+
+.shove-3 {
+  margin-right: 15px; }
+
+.shove-4 {
+  margin-right: 20px; }
+
+.shove-5 {
+  margin-right: 25px; }
+
+.shove-6 {
+  margin-right: 30px; }
+
+.shove-7 {
+  margin-right: 35px; }
+
+.shove-8 {
+  margin-right: 40px; }
+
+.shove-9 {
+  margin-right: 45px; }
+
+.shove-10 {
+  margin-right: 50px; }
+
+/**
+ * Tow: Pulling an Element [from] the Right Some 
+ */
+.tow-1 {
+  margin-right: -5px; }
+
+.tow-2 {
+  margin-right: -10px; }
+
+.tow-3 {
+  margin-right: -15px; }
+
+.tow-4 {
+  margin-right: -20px; }
+
+.tow-5 {
+  margin-right: -25px; }
+
+.tow-6 {
+  margin-right: -30px; }
+
+.tow-7 {
+  margin-right: -35px; }
+
+.tow-8 {
+  margin-right: -40px; }
+
+.tow-9 {
+  margin-right: -45px; }
+
+.tow-10 {
+  margin-right: -50px; }
+
+/**
+ * Alignment
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Image alignment. 
+ */
+img.align-right {
+  float: right;
+  margin: 0 0 0 1em; }
+img.align-left {
+  float: left;
+  margin: 0 1em 0 0; }
+img.align-center {
+  display: block;
+  margin: 0 auto; }
+
+/**
+ * Text alignment. 
+ */
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-center {
+  text-align: center; }
+
+/**
+ * Vertical Inline Alignment. 
+ */
+.align-baseline {
+  vertical-align: baseline; }
+
+.align-top {
+  vertical-align: top; }
+
+.align-middle {
+  vertical-align: middle; }
+
+.align-bottom {
+  vertical-align: bottom; }
+
+.align-text-top {
+  vertical-align: text-top; }
+
+.align-text-bottom {
+  vertical-align: text-bottom; }
+
+/**
+ * Floats
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+/**
+ * GTFO Classes
+ *
+ * Motivation: Don't write more CSS to nullify inheritance. Arguable?
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+.no-margin {
+  margin: 0; }
+
+.no-margin-top {
+  margin-top: 0; }
+
+.no-margin-right {
+  margin-right: 0; }
+
+.no-margin-bottom {
+  margin-bottom: 0; }
+
+.no-margin-left {
+  margin-left: 0; }
+
+.no-padding {
+  padding: 0; }
+
+.no-padding-top {
+  padding-top: 0; }
+
+.no-padding-right {
+  padding-right: 0; }
+
+.no-padding-bottom {
+  padding-bottom: 0; }
+
+.no-padding-left {
+  padding-left: 0; }
+
+/**
+ * Inline (Lists)
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+.inline {
+  display: inline;
+  margin: 0; }
+  .inline li {
+    display: inline;
+    margin: 0; }
+
+/**
+ * Sidebar Copy Distillers
+ *
+ * Motivation: For containers' with unpredictable markup.
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Across the board
+ */
+.distill p, .distill ul, .distill ol, .distill dl {
+  margin: 0; }
+
+/**
+ * By element type
+ */
+.distill-p p, .distill-ul ul, .distill-ol ol, .distill-dl dl {
+  margin: 0; }
+
+/**
+ * Ad Hoc Text Sizing
+ *
+ * Motivation: ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+.text-large {
+  font-size: 20px; }
+
+.text-jumbo {
+  font-size: 18px; }
+
+.text-big {
+  font-size: 14px; }
+
+.text-default {
+  font-size: 12px; }
+
+.text-small {
+  font-size: 10px; }
+
+.text-tiny {
+  font-size: 9px; }
+
+/**
+ * Clearing
+ *
+ * Motivation: ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+.clear-all {
+  clear: both; }
+
+.clear-left {
+  clear: left; }
+
+.clear-right {
+  clear: right; }
+
+/* End of _modules/tools.css */
+/**
+ * GDGS Table
+ * 
+ * table-layout: fixed gives inconsistent renderings
+ * across various browsers. Either drop table.css or
+ * drop table-layout: fixed. Don't use both. Or just
+ * hack it up.
+ * 
+ * Do not use 16-column tables. Buggy in Trident browsers.
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-optional
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            None.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Table Layout
+ *
+ * Set table-layout to auto !important. GDGS assumes this.
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+table {
+  table-layout: auto !important; }
+
+/**
+ * Table columns
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.column-layout col.columns-1, .column-layout col.columns-2, .column-layout col.columns-3, .column-layout col.columns-4, .column-layout col.columns-5, .column-layout col.columns-6, .column-layout col.columns-7, .column-layout col.columns-8, .column-layout col.columns-9, .column-layout col.columns-10, .column-layout col.columns-11, .column-layout col.columns-12, .column-layout col.columns-13, .column-layout col.columns-14, .column-layout col.columns-15, .column-layout col.columns-16 {
+  display: table-column;
+  float: none; }
+.column-layout col.columns-1 {
+  width: 60px; }
+.column-layout col.columns-2 {
+  width: 120px; }
+.column-layout col.columns-3 {
+  width: 180px; }
+.column-layout col.columns-4 {
+  width: 240px; }
+.column-layout col.columns-5 {
+  width: 300px; }
+.column-layout col.columns-6 {
+  width: 360px; }
+.column-layout col.columns-7 {
+  width: 420px; }
+.column-layout col.columns-8 {
+  width: 480px; }
+.column-layout col.columns-9 {
+  width: 540px; }
+.column-layout col.columns-10 {
+  width: 600px; }
+.column-layout col.columns-11 {
+  width: 660px; }
+.column-layout col.columns-12 {
+  width: 720px; }
+.column-layout col.columns-13 {
+  width: 780px; }
+.column-layout col.columns-14 {
+  width: 840px; }
+.column-layout col.columns-15 {
+  width: 900px; }
+.column-layout col.columns-16 {
+  width: 960px; }
+.column-layout col.columns-1.end {
+  width: 40px; }
+.column-layout col.columns-2.end {
+  width: 100px; }
+.column-layout col.columns-3.end {
+  width: 160px; }
+.column-layout col.columns-4.end {
+  width: 220px; }
+.column-layout col.columns-5.end {
+  width: 280px; }
+.column-layout col.columns-6.end {
+  width: 340px; }
+.column-layout col.columns-7.end {
+  width: 400px; }
+.column-layout col.columns-8.end {
+  width: 460px; }
+.column-layout col.columns-9.end {
+  width: 520px; }
+.column-layout col.columns-10.end {
+  width: 580px; }
+.column-layout col.columns-11.end {
+  width: 640px; }
+.column-layout col.columns-12.end {
+  width: 720px; }
+.column-layout col.columns-13.end {
+  width: 760px; }
+.column-layout col.columns-14.end {
+  width: 820px; }
+.column-layout col.columns-15.end {
+  width: 880px; }
+.column-layout col.columns-16.end {
+  width: 940px; }
+
+/**
+ * Table column widths
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Last table column
+ *
+ * Ad hoc table column width fix
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround      ie6, ie7, ie8
+ * @tested          ie6, ie7, ie8
+ * @valid           true
+ */
+/* End _module/table.css */
+/**
+ * GDGS Bounds
+ * 
+ * ...
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-core
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Bounds Controls (Micro-level)
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Bulwark Bastions Bellowed Bastardly Bison 
+ */
+.bulwark-1 {
+  padding: 5px; }
+
+.bulwark-2 {
+  padding: 10px; }
+
+.bulwark-3 {
+  padding: 15px; }
+
+.bulwark-4 {
+  padding: 20px; }
+
+.bulwark-5 {
+  padding: 25px; }
+
+/**
+ * Shouldering Our Adjacent Cousins 
+ */
+.shoulder-1 {
+  padding: 0 5px; }
+
+.shoulder-2 {
+  padding: 0 10px; }
+
+.shoulder-3 {
+  padding: 0 15px; }
+
+.shoulder-4 {
+  padding: 0 20px; }
+
+.shoulder-5 {
+  padding: 0 25px; }
+
+/**
+ * Bulwarking
+ *
+ * USAGE:
+ * Usually put on .begin, instead of .columns-X, and on elements direct descendants to a .bulwark
+ * "element.columns-X.end" may look odd, when nested under a .bulwark, but it works.
+ * 
+ * @section:        modules
+ * @subsection      support
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Bulwark 1
+ */
+.bulwark-1 .bulwark-1-columns-1 {
+  width: 35px; }
+.bulwark-1 .bulwark-1-columns-2 {
+  width: 95px; }
+.bulwark-1 .bulwark-1-columns-3 {
+  width: 155px; }
+.bulwark-1 .bulwark-1-columns-4 {
+  width: 215px; }
+.bulwark-1 .bulwark-1-columns-5 {
+  width: 275px; }
+.bulwark-1 .bulwark-1-columns-6 {
+  width: 335px; }
+.bulwark-1 .bulwark-1-columns-7 {
+  width: 395px; }
+.bulwark-1 .bulwark-1-columns-8 {
+  width: 455px; }
+.bulwark-1 .bulwark-1-columns-9 {
+  width: 515px; }
+.bulwark-1 .bulwark-1-columns-10 {
+  width: 575px; }
+.bulwark-1 .bulwark-1-columns-11 {
+  width: 635px; }
+.bulwark-1 .bulwark-1-columns-12 {
+  width: 695px; }
+.bulwark-1 .bulwark-1-columns-13 {
+  width: 755px; }
+.bulwark-1 .bulwark-1-columns-14 {
+  width: 815px; }
+.bulwark-1 .bulwark-1-columns-15 {
+  width: 875px; }
+.bulwark-1 .bulwark-1-columns-16 {
+  width: 935px; }
+
+/**
+ * Bulwark 2
+ */
+.bulwark-2 .bulwark-2-columns-1 {
+  width: 30px; }
+.bulwark-2 .bulwark-2-columns-2 {
+  width: 90px; }
+.bulwark-2 .bulwark-2-columns-3 {
+  width: 150px; }
+.bulwark-2 .bulwark-2-columns-4 {
+  width: 210px; }
+.bulwark-2 .bulwark-2-columns-5 {
+  width: 270px; }
+.bulwark-2 .bulwark-2-columns-6 {
+  width: 330px; }
+.bulwark-2 .bulwark-2-columns-7 {
+  width: 390px; }
+.bulwark-2 .bulwark-2-columns-8 {
+  width: 450px; }
+.bulwark-2 .bulwark-2-columns-9 {
+  width: 510px; }
+.bulwark-2 .bulwark-2-columns-10 {
+  width: 570px; }
+.bulwark-2 .bulwark-2-columns-11 {
+  width: 630px; }
+.bulwark-2 .bulwark-2-columns-12 {
+  width: 690px; }
+.bulwark-2 .bulwark-2-columns-13 {
+  width: 750px; }
+.bulwark-2 .bulwark-2-columns-14 {
+  width: 810px; }
+.bulwark-2 .bulwark-2-columns-15 {
+  width: 870px; }
+.bulwark-2 .bulwark-2-columns-16 {
+  width: 930px; }
+
+/**
+ * Bulwark 3
+ */
+.bulwark-3 .bulwark-3-columns-1 {
+  width: 25px; }
+.bulwark-3 .bulwark-3-columns-2 {
+  width: 85px; }
+.bulwark-3 .bulwark-3-columns-3 {
+  width: 145px; }
+.bulwark-3 .bulwark-3-columns-4 {
+  width: 205px; }
+.bulwark-3 .bulwark-3-columns-5 {
+  width: 265px; }
+.bulwark-3 .bulwark-3-columns-6 {
+  width: 325px; }
+.bulwark-3 .bulwark-3-columns-7 {
+  width: 385px; }
+.bulwark-3 .bulwark-3-columns-8 {
+  width: 445px; }
+.bulwark-3 .bulwark-3-columns-9 {
+  width: 505px; }
+.bulwark-3 .bulwark-3-columns-10 {
+  width: 565px; }
+.bulwark-3 .bulwark-3-columns-11 {
+  width: 625px; }
+.bulwark-3 .bulwark-3-columns-12 {
+  width: 685px; }
+.bulwark-3 .bulwark-3-columns-13 {
+  width: 745px; }
+.bulwark-3 .bulwark-3-columns-14 {
+  width: 805px; }
+.bulwark-3 .bulwark-3-columns-15 {
+  width: 865px; }
+.bulwark-3 .bulwark-3-columns-16 {
+  width: 925px; }
+
+/**
+ * Shouldering
+ *
+ * USAGE:
+ * Usually put on .begin, instead of .columns-X, and on elements direct descendants to a .shoulder
+ * "element.columns-X.end" may look odd, when nested under a .shoulder, but it works.
+ * 
+ * @section:        modules
+ * @subsection      support
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * Shoulder 1
+ */
+.shoulder-1 .shoulder-1-columns-1 {
+  width: 35px; }
+.shoulder-1 .shoulder-1-columns-2 {
+  width: 95px; }
+.shoulder-1 .shoulder-1-columns-3 {
+  width: 155px; }
+.shoulder-1 .shoulder-1-columns-4 {
+  width: 215px; }
+.shoulder-1 .shoulder-1-columns-5 {
+  width: 275px; }
+.shoulder-1 .shoulder-1-columns-6 {
+  width: 335px; }
+.shoulder-1 .shoulder-1-columns-7 {
+  width: 395px; }
+.shoulder-1 .shoulder-1-columns-8 {
+  width: 455px; }
+.shoulder-1 .shoulder-1-columns-9 {
+  width: 515px; }
+.shoulder-1 .shoulder-1-columns-10 {
+  width: 575px; }
+.shoulder-1 .shoulder-1-columns-11 {
+  width: 635px; }
+.shoulder-1 .shoulder-1-columns-12 {
+  width: 695px; }
+.shoulder-1 .shoulder-1-columns-13 {
+  width: 755px; }
+.shoulder-1 .shoulder-1-columns-14 {
+  width: 815px; }
+.shoulder-1 .shoulder-1-columns-15 {
+  width: 875px; }
+.shoulder-1 .shoulder-1-columns-16 {
+  width: 935px; }
+
+/**
+ * Shoulder 2
+ */
+.shoulder-2 .shoulder-2-columns-1 {
+  width: 30px; }
+.shoulder-2 .shoulder-2-columns-2 {
+  width: 90px; }
+.shoulder-2 .shoulder-2-columns-3 {
+  width: 150px; }
+.shoulder-2 .shoulder-2-columns-4 {
+  width: 210px; }
+.shoulder-2 .shoulder-2-columns-5 {
+  width: 270px; }
+.shoulder-2 .shoulder-2-columns-6 {
+  width: 330px; }
+.shoulder-2 .shoulder-2-columns-7 {
+  width: 390px; }
+.shoulder-2 .shoulder-2-columns-8 {
+  width: 450px; }
+.shoulder-2 .shoulder-2-columns-9 {
+  width: 510px; }
+.shoulder-2 .shoulder-2-columns-10 {
+  width: 570px; }
+.shoulder-2 .shoulder-2-columns-11 {
+  width: 630px; }
+.shoulder-2 .shoulder-2-columns-12 {
+  width: 690px; }
+.shoulder-2 .shoulder-2-columns-13 {
+  width: 750px; }
+.shoulder-2 .shoulder-2-columns-14 {
+  width: 810px; }
+.shoulder-2 .shoulder-2-columns-15 {
+  width: 870px; }
+.shoulder-2 .shoulder-2-columns-16 {
+  width: 930px; }
+
+/**
+ * Shoulder 3
+ */
+.shoulder-3 .shoulder-3-columns-1 {
+  width: 25px; }
+.shoulder-3 .shoulder-3-columns-2 {
+  width: 85px; }
+.shoulder-3 .shoulder-3-columns-3 {
+  width: 145px; }
+.shoulder-3 .shoulder-3-columns-4 {
+  width: 205px; }
+.shoulder-3 .shoulder-3-columns-5 {
+  width: 265px; }
+.shoulder-3 .shoulder-3-columns-6 {
+  width: 325px; }
+.shoulder-3 .shoulder-3-columns-7 {
+  width: 385px; }
+.shoulder-3 .shoulder-3-columns-8 {
+  width: 445px; }
+.shoulder-3 .shoulder-3-columns-9 {
+  width: 505px; }
+.shoulder-3 .shoulder-3-columns-10 {
+  width: 565px; }
+.shoulder-3 .shoulder-3-columns-11 {
+  width: 625px; }
+.shoulder-3 .shoulder-3-columns-12 {
+  width: 685px; }
+.shoulder-3 .shoulder-3-columns-13 {
+  width: 745px; }
+.shoulder-3 .shoulder-3-columns-14 {
+  width: 805px; }
+.shoulder-3 .shoulder-3-columns-15 {
+  width: 865px; }
+.shoulder-3 .shoulder-3-columns-16 {
+  width: 925px; }
+
+/* End of _modules/bounds.css */
+/**
+ * GDGS Standardize
+ * 
+ * Consider for Web projects.
+ *
+ * @cssdoc          version 1.0-pre
+ * 
+ * @site            Getting Dress'd Grid System
+ * @link            http://nerdfiles.net/gdgs/
+ * @author          nerdfiles
+ * @copyright       Copyright (c) 2010, 2010-2011 by nerdfiles (Aaron Alexander)
+ * @license         Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
+ *
+ * @project         gdgs
+ * @version         0.0.1
+ * @package         gdgs-optional
+ * @subpackage      gdgs-modules
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            None.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ *
+ * @style           Framework & grid system
+ * @colordef        #000000; Black
+ * @colordef        #ffffff; White
+ * @fontdef         helvetica, arial, sans-serif
+ */
+/**
+ * Color Palette
+ *
+ * Standardize your colors!
+ * Codify @style and @colordefs here. Possibly redundant. 
+ * Consider: http://colorschemedesigner.com/
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.text-primary-color, .text-secondary-color, .text-tertiary-color, .text-quaternary-color, .text-quinary-color {
+  color: #000; }
+
+/**
+ * HTML and Document Body Elements
+ *
+ * Standardize your body.
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * HTML
+ */
+/**
+ * Body
+ */
+body {
+  background: #fff; }
+
+/**
+ * Line Breaks
+ *
+ * Standardize your line-breaks.
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+br {
+  clear: left; }
+
+/**
+ * Skip Links
+ *
+ * Skip Links are a standard, but there is no standard approach to them.
+ * Define yours!
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+div#skip-links {
+  position: absolute;
+  left: -9999px; }
+
+/**
+ * Tables
+ *
+ * Standardize your tables, zebras, etc.
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * All Tables
+ */
+table {
+  margin: 0 0 1.5em; }
+
+/**
+ * Tables' Typesetting Options
+ */
+table.small {
+  font-size: .85em; }
+
+/**
+ * All Headers and Cells 
+ */
+tr th {
+  padding: 5px; }
+tr td {
+  vertical-align: top;
+  padding: 5px; }
+
+/**
+ * First and Last Header 
+ */
+/**
+ * First and Last Column 
+ */
+/** 
+ * First and Last Row 
+ */
+/**
+ * Even and Odd Rows 
+ */
+/**
+ * Head 
+ */
+table.alt {
+  background: #fff; }
+  table.alt tr th {
+    background: #FFAC36;
+    border: 1px solid               #D18821; }
+  table.alt tr td {
+    border: 1px solid               #ccc; }
+  table.alt tr.odd-child {
+    background: #e1e1e1; }
+  table.alt tfoot td {
+    border: 1px solid               #FC363F;
+    background: #FF8F94; }
+  table.alt caption {
+    padding: 5px;
+    background: #FFEF8F;
+    border: 1px solid               #DEC946; }
+
+/**
+ * Body 
+ */
+/**
+ * Foot 
+ */
+/**
+ * Caption 
+ */
+/**
+ * Zebra Tables
+ */
+/**
+ * All Headers and Cells 
+ */
+/**
+ * First and Last Header 
+ */
+/**
+ * First and Last Header 
+ */
+/**
+ * First and Last Column 
+ */
+/**
+ * First and Last Row 
+ */
+/**
+ * Even and Odd Rows 
+ */
+/**
+ * Head 
+ */
+/**
+ * Body 
+ */
+/**
+ * Foot 
+ */
+/**
+ * Caption 
+ */
+/**
+ * Form Styleing
+ *
+ * Standardize your forms!
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Check if comprehensive for HTML5.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+input, textarea, select {
+  padding: 5px 0;
+  -moz-box-shadow: #ccc 1px 1px 3px inset;
+  -webkit-box-shadow: #e1e1e1 1px 1px 3px inset;
+  box-shadow: 1px 1px 3px inset   #e1e1e1;
+  border: 0px solid               #d1d1d1; }
+
+input.style-1, select.style-1, textarea.style-1 {
+  padding: 5px 5px;
+  border: 1px solid               #ccc; }
+
+legend {
+  margin: 0 0 1em;
+  border-bottom: 3px solid            #FFBB51; }
+
+/**
+ * Buttons
+ *
+ * Standardize your buttons! 
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Develop cross-browser approach.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline; }
+  .btn:link {
+    text-decoration: none;
+    display: inline-block;
+    *zoom: 1;
+    *display: inline; }
+  .btn:hover {
+    text-decoration: none; }
+  .btn:active {
+    text-decoration: none; }
+    .btn:active span, .btn:active input {
+      -webkit-box-shadow: #F39631 1px 1px 3px inset;
+      -moz-box-shadow: #F39631 1px 1px 3px inset;
+      box-shadow: #F39631 1px 1px 3px inset; }
+  .btn span {
+    text-shadow: 1px 1px 1px    #5F3A12;
+    cursor: pointer;
+    font-family: sans-serif, Helvetica, Arial;
+    display: inline-block;
+    line-height: 1;
+    *zoom: 1;
+    *display: inline; }
+  .btn input {
+    font-size: 12px;
+    text-shadow: 1px 1px 1px    #5F3A12;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    background: #fff;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    *zoom: 1;
+    *display: inline; }
+
+.btn-1 span, .btn-1 input {
+  background: #FFBB51;
+  padding: 5px 10px;
+  border: 1px solid               #AF6F2B;
+  color: #fff;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ef8f2b), color-stop(0.5, #ffac45), color-stop(1, #ffcf61));
+  background: -moz-linear-gradient(center bottom, #ef8f2b 0%, #ffac45 50%, #ffcf61 100%);
+  -moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  border-radius: .5em; }
+
+/**
+ * Rounded corners
+ *
+ * Standardize your rounded corners!
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+/**
+ * All Around - .5em 
+ */
+.corners-1 {
+  -moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  border-radius: .5em; }
+
+/**
+ * Sharp Bottom Left - .5em 
+ */
+.corners-2 {
+  -webkit-border-radius: .5em;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius: .5em;
+  -moz-border-radius-bottomleft: 0;
+  border-radius: .5em;
+  border-bottom-left-radius: 0; }
+
+/** 
+ * Tombstone - .5em 
+ */
+.corners-3 {
+  -webkit-border-top-left-radius: .5em;
+  -webkit-border-top-right-radius: .5em;
+  -moz-border-radius-topleft: .5em;
+  -moz-border-radius-topright: .5em;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em; }
+
+/**
+ * Inline Styles
+ *
+ * Motivation: ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+.blank, .empty {
+  color: #999; }
+
+.email {
+  border-bottom: 1px solid        #ccc; }
+
+.required {
+  color: #c30000; }
+
+.not-required {
+  margin-right: 9px; }
+
+/**
+ * Arbitrary Widths
+ *
+ * Motivation: None; avoid these. 
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+.width-tiny {
+  width: 2em; }
+
+.width-small {
+  width: 3em; }
+
+.width-medium {
+  width: 5em; }
+
+.width-big {
+  width: 7em; }
+
+.width-large {
+  width: 10em; }
+
+.width-huge {
+  width: 12em; }
+
+.width-giant {
+  width: 15em; }
+
+.width-gigantic {
+  width: 18em; }
+
+.width-approx-full {
+  width: 99%; }
+
+.width-full {
+  width: 100%; }
+
+.width-postalcode {
+  width: 6em; }
+
+.width-phone {
+  width: 9em; }
+
+/**
+ * Form Patterns
+ *
+ * Motivation: None; avoid these. 
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Vertical Forms 
+ */
+/**
+ * Columnar Forms 
+ */
+/**
+ * Page separators
+ *
+ * Motivation: ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+hr {
+  border: none;
+  border-top: 1px #ccc solid; }
+
+/**
+ * Wrappers
+ *
+ * Motivation: ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Header Wrappers
+ *
+ * Motivation: None; consider removing these. (HTML5)
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Headers
+ *
+ * Standardize your headers!
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            Consider moving to Standardize module.
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          none
+ * @valid           true
+ */
+/**
+ * Anchors
+ *
+ * Standardize your logic/catalogue for anchors!
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+a {
+  outline: none; }
+  a:link {
+    outline: none; }
+  a:hover {
+    text-decoration: underline; }
+  a img {
+    border: none; }
+
+/* End of _modules/standardize.css */
