@@ -32,84 +32,6 @@
  * @valid           true
  */
 
-/**
- * Document Typesetting
- *
- * ...
- * 
- * @section:        modules
- * @subsection      utility
- *
- * @version         0.0.1
- * @since           0.0.1
- * @date            2011-03-09 03:06
- * @lastmodified    2011-03-09 03:06
- *
- * @todo            ...
- *
- * @css-for         all
- * @media           all
- * @affected        all
- * @bugfix
- * @workaround
- * @tested          all
- * @valid           true
- */
-
-/**
- * Context
- */
-
-body {
-  font-size: 75%;
-  color: #000;
-  line-height: 1.5;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-align: left;
-  white-space: normal;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-/**
- * Global Typesetting
- */
-
-p, ul, ol, dl, input, textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal; }
-
-/**
- * Headings Typesetting
- */
-
-h1 {
-  font-size: 3em;
-  line-height: 1;
-  margin-bottom: 0.5em; }
-
-h2 {
-  font-size: 2em;
-  margin-bottom: 0.75em; }
-
-h3 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin-bottom: 1em; }
-
-h4 {
-  font-size: 1.2em;
-  line-height: 1.25;
-  margin-bottom: 1.25em; }
-
-h5 {
-  font-size: 1em;
-  margin-bottom: 1.5em; }
-
-h6 {
-  font-size: 1em; }
 
 /**
  * Optimize Legibility
@@ -137,9 +59,10 @@ h6 {
 
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, input, textarea {
   text-rendering: optimizeLegibility !important; }
-
+  
+  
 /**
- * Text Elements
+ * Document Typesetting
  *
  * ...
  * 
@@ -162,6 +85,81 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, input, textarea {
  * @valid           true
  */
 
+/**
+ * Context Typesetting
+ */
+
+body {
+    
+  color: #000;
+  line-height: 1.5;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-align: left;
+  white-space: normal; 
+
+  font: {
+    family: "Raleway", sans-serif, "Helvetica Neue", Helvetica, Arial;
+    size: 1em; } }
+
+/**
+ * Headings Typesetting
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Questrial", sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-weight: normal; }
+  
+h1, h2, h3 { 
+  margin-top: 0; 
+  margin-bottom: 0; }
+  
+h1 { 
+  font-size: 2.125em; 
+  padding: 2.00735em 0; }
+  
+h2 { 
+  font-size: 1.625em; 
+  padding: 1.81731em 0; }
+  
+h3 { 
+  font-size: 1.3125em; 
+  padding: 1.79167em 0; }
+
+
+/**
+ * Body Copy Typesetting
+ *
+ * ...
+ * 
+ * @section:        modules
+ * @subsection      utility
+ *
+ * @version         0.0.1
+ * @since           0.0.1
+ * @date            2011-03-09 03:06
+ * @lastmodified    2011-03-09 03:06
+ *
+ * @todo            ...
+ *
+ * @css-for         all
+ * @media           all
+ * @affected        all
+ * @bugfix
+ * @workaround
+ * @tested          all
+ * @valid           true
+ */
+
+p, ul, ol, dl, input, textarea {
+  
+  line-height: 1.75;
+  margin: 0 0 1.5em 0;
+  
+  font: {
+    family: "Raleway", sans-serif, "Helvetica Neue", Helvetica, Arial;
+    size: 1em; } }
+    
 p {
   margin: 0 0 1.5em; }
 

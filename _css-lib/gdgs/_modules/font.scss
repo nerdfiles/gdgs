@@ -105,12 +105,29 @@
  * @css-for         all
  * @media           all
  * @affected        all
- * @bugfix
+ * @bugfix 
  * @workaround
  * @tested          all
  * @valid           true
  */
  
-@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+/**
+ * @import url(http://fonts.googleapis.com/css?family=Questrial);
+ */
+ 
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Questrial'), local('Questrial-Regular'), url('http://themes.googleusercontent.com/static/fonts/questrial/v1/MYWJ4lYm5dbZ1UBuYox79LO3LdcAZYWl9Si6vvxL-qU.woff') format('woff'); }
+
+/**
+ * @import url(http://fonts.googleapis.com/css?family=Raleway:100);
+ */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway-Thin'), url('http://themes.googleusercontent.com/static/fonts/raleway/v2/RJMlAoFXXQEzZoMSUteGWLO3LdcAZYWl9Si6vvxL-qU.woff') format('woff'); }
 
 /* End of _modules/font.css */

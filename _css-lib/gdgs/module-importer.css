@@ -436,19 +436,22 @@ table {
  * Context
  */
 body {
-  font-size: 75%;
+  font-family: sans-serif, "Helvetica Neue", Helvetica, Arial;
+  font-size: 16px;
   color: #000;
   line-height: 1.5;
   letter-spacing: normal;
   word-spacing: normal;
   text-align: left;
-  white-space: normal;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  white-space: normal; }
 
 /**
  * Global Typesetting
  */
 p, ul, ol, dl, input, textarea {
+  line-height: 24px;
+  font-size: 16px;
+  margin: 0 0 1.5em 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {

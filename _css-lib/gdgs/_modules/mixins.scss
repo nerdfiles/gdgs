@@ -1,0 +1,101 @@
+@mixin columns-1 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 40px; }
+@mixin columns-2 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100px; }
+@mixin columns-3 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 160px; }
+@mixin columns-4 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px; }
+@mixin columns-5 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 280px; }
+@mixin columns-6 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 340px; }
+@mixin columns-7 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 400px; }
+@mixin columns-8 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 460px; }
+@mixin columns-9 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 520px; }
+@mixin columns-10 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px; }
+@mixin columns-11 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 640px; }
+@mixin columns-12 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 700px; }
+@mixin columns-13 {
+  display: inline;
+  float: left; 
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 760px; }
+@mixin columns-14 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 820px; }
+@mixin columns-15 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 880px; }
+@mixin columns-16 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px; }
+  
+@mixin begin {
+  margin-left: 0 !important; }
+@mixin end {
+  margin-right: 0 !important; }
